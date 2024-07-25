@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Express App</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  
+  <%- include("partials/header") -%>
+
+  <%- include("partials/nav") -%>
+
+  <%- include("partials/main") -%>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4">
+    <div class="container">
+      <a href="https://www.facebook.com/?locale=es_LA">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook"
+          width="20" height="20">
+      </a>
+      <a href="https://twitter.com/?lang=es">
+        <img
+          src="https://i0.wp.com/friaryschool.co.uk/wp-content/uploads/2023/11/large-x-logo.png.twimg_.1920-e1699539508422.png?ssl=1"
+          alt="Twitter" width="20" height="20">
+      </a>
+      <a href="https://www.instagram.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png"
+          alt="Instagram" width="20" height="20">
+      </a>
+      <p class="mt-3">© 2024 Inalto. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery, Popper.js, and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
