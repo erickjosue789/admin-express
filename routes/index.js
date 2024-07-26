@@ -14,19 +14,19 @@ router.get('/photos', async function (req, res, next) {
 });
 
 router.get('/photos/add', function (req, res, next) {
-  res.render('fotos_formulario', { title: 'Express' });
+  res.render('fotos_formulario', { title: 'Express', foto: null });
 });
 
 router.post('/photos/save', async function (req,
   res, next) {
-  let { title, description, rate } = req.body
+  let { title, description, rate, route } = req.body
 
   const URL = 'http://localhost:4444/rest/fotos/save'
   let data = {
     titulo: title,
     descripcion: description,
     calificacion: rate,
-    ruta: ''
+    ruta: 'public/images/'+ route
   }
 
   const config = {
@@ -51,7 +51,7 @@ router.get('/photos/edit/:id', async function (req, res, next) {
   const URL = 'http://localhost:4444/rest/fotos/findById/'+id+'/json';
 
   const response = await axios.get(URL);
-  res.render('edit_foto', { title: 'Edit Foto', foto: response.data });
+  res.render('fotos_formulario', { title: 'Edit Foto', foto: response.data });
 });
 
 router.post('/photos/update', async function (req, res, next) {
